@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JeanDaly</title>
+    <link rel="" type="" href=""/>
+    <link rel="stylesheet" href="thankyou.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+
+    <div class="thankyou" data-aos="zoom-in-down" data-aos-duration="1000">
+        <h1> Thank You! </h1>
+        <p> Your Message has been received</p>
+
+        
+        <p><span id="timer"></span></p>
+        </div>
+
+        <script type = "text/javascript">
+            var count= 1.5;
+
+            var redirect= "http://127.0.0.1:5500/";
+
+            function countDown() {
+                var timer = document.getElementById("timer");
+                if(count > 0){
+                count--;
+
+                // timer.innerHTML = "This page will redirect in "+count+"seconds";
+                setTimeout("countDown()", 1000);
+
+            }else {
+                window.location.href = redirect;
+            }
+            }
+
+            countDown();
+        </script>
+    
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script>
+            AOS.init();
+          </script>
+
+</body>
+</html>
